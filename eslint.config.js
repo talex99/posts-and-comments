@@ -6,7 +6,6 @@ const angular = require("angular-eslint");
 module.exports = tseslint.config(
   {
     files: ["**/*.ts"],
-    plugins: ["prettier"],
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
