@@ -14,7 +14,7 @@ export abstract class CoreHttpService {
 
   //#region Properties
 
-  private apiUrl = 'https://qposoft.typicode.com/';
+  private apiUrl = 'https://jsonplaceholder.typicode.com/';
 
   //#endregion
 
@@ -25,11 +25,11 @@ export abstract class CoreHttpService {
   }
 
   protected post<T>(slug: string, body: unknown): Observable<T> {
-    return this.post<T>(`${this.apiUrl}${slug}`, body);
+    return this.http.post<T>(`${this.apiUrl}${slug}`, body);
   }
 
   protected put<T>(slug: string, body: unknown): Observable<T> {
-    return this.put<T>(`${this.apiUrl}${slug}`, body);
+    return this.http.put<T>(`${this.apiUrl}${slug}`, body);
   }
 
   protected delete<T>(slug: string): Observable<T> {
