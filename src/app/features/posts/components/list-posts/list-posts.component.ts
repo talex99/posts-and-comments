@@ -117,9 +117,19 @@ export class ListPostsComponent implements OnInit {
   }
 
   onDeletePost(postId: string): void {
-    this.dialog.open(DeletePostComponent, {
-      data: postId,
-    });
+    this.dialog
+      .open(DeletePostComponent, {
+        data: postId,
+      })
+      .afterClosed()
+      .pipe(
+        filter((x) => x === true),
+        takeUntilDestroyed(this.destroyRef),
+      )
+      .subscribe(() => {
+        this.posts = this.posts.filter((post) => post.id !== postId);
+        this.setDataSource(this.posts);
+      });
   }
 
   onAddPost(): void {
