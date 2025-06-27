@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
-import { CommentsComponent } from './features/comments/pages/comments/comments/comments.component';
-import { PostsComponent } from './features/posts/pages';
+import { Path } from './shared/enums';
 
 export const routes: Routes = [
   {
-    path: '',
-    component: PostsComponent,
+    path: Path.Root,
+    loadComponent: () =>
+      import('./features/posts/pages').then((c) => c.PostsComponent),
   },
   {
-    path: 'comments',
-    component: CommentsComponent,
+    path: Path.Comments,
+    loadComponent: () =>
+      import('./features/comments/pages').then((c) => c.CommentsComponent),
   },
 ];
