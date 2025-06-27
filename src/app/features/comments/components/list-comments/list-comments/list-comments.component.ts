@@ -11,14 +11,14 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { Comment } from '@shared-models';
+import { CommentsHttpService } from '@shared-services';
 import { filter } from 'rxjs';
 import {
   AddCommentComponent,
   DeleteCommentComponent,
   UpdateCommentComponent,
 } from '../..';
-import { Comment } from '../../../../../shared/models';
-import { CommentsHttpService } from '../../../../../shared/services';
 
 @Component({
   selector: 'app-list-comments',

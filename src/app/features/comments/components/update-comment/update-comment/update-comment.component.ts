@@ -10,11 +10,8 @@ import {
 } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { Comment } from '../../../../../shared/models';
-import {
-  CommentFormService,
-  CommentsHttpService,
-} from '../../../../../shared/services';
+import { Comment } from '@shared-models';
+import { CommentFormService, CommentsHttpService } from '@shared-services';
 @Component({
   selector: 'app-update-comment',
   imports: [

@@ -4,11 +4,8 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormField, MatInput, MatLabel } from '@angular/material/input';
-import { Comment } from '../../../../../shared/models/comment';
-import {
-  CommentFormService,
-  CommentsHttpService,
-} from '../../../../../shared/services';
+import { Comment } from '@shared-models';
+import { CommentFormService, CommentsHttpService } from '@shared-services';
 @Component({
   selector: 'app-add-comment',
   imports: [

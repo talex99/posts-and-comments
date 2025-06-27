@@ -6,7 +6,7 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { CommentsHttpService } from '../../../../../shared/services';
+import { CommentsHttpService } from '@shared-services';
 
 @Component({
   selector: 'app-delete-comment',

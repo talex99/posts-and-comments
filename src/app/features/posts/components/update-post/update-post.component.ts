@@ -9,11 +9,8 @@ import {
 } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { Post } from '../../../../shared/models';
-import {
-  PostsFormService,
-  PostsHttpService,
-} from '../../../../shared/services';
+import { Post } from '@shared-models';
+import { PostsFormService, PostsHttpService } from '@shared-services';
 
 @Component({
   selector: 'app-update-post',

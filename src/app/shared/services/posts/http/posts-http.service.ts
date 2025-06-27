@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
+import { CoreHttpService } from '@core-services';
+import { Post } from '@shared-models';
 import { Observable } from 'rxjs';
-import { CoreHttpService } from '../../../../core/services/core-http/core-http.service';
-import { Post } from '../../../models';
 
 @Injectable({
   providedIn: 'root',

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Comment } from '../../../models';
+import { Comment } from '@shared-models';
 @Injectable({
   providedIn: 'root',
 })

@@ -6,7 +6,7 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { PostsHttpService } from '../../../../shared/services';
+import { PostsHttpService } from '@shared-services';
 
 @Component({
   selector: 'app-delete-post',

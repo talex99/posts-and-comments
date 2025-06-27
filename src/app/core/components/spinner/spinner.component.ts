@@ -3,7 +3,7 @@ import {
   MatProgressSpinner,
   MatProgressSpinnerModule,
 } from '@angular/material/progress-spinner';
-import { LoaderService } from '../../services/loader-service/loader.service';
+import { LoaderService } from '@core-services';
 
 @Component({
   selector: 'app-spinner',
