@@ -24,7 +24,8 @@
       "@shared-enums": ["src/app/shared/enums"],
       "@core-components": ["src/app/core/components"],
       "@core-interceptors": ["src/app/core/interceptors"],
-      "@core-services": ["src/app/core/services"]
+      "@core-services": ["src/app/core/services"],
+      "@shared-components": ["src/app/shared/components"]
     }
   },
   "angularCompilerOptions": {

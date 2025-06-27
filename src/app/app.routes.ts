@@ -12,4 +12,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/comments/pages').then((c) => c.CommentsComponent),
   },
+  {
+    path: Path.WildCard,
+    redirectTo: Path.Root,
+    pathMatch: 'full',
+  },
 ];
