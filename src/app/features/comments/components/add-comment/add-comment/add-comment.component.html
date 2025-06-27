@@ -1,0 +1,23 @@
+<mat-dialog-content>
+  <form [formGroup]="addForm">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" /> </mat-form-field
+    ><br />
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" /> </mat-form-field
+    ><br />
+    <mat-form-field>
+      <mat-label>Body</mat-label>
+      <input matInput formControlName="body" /> </mat-form-field
+    ><br />
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onCancel()">Cancel</button>
+  <button mat-flat-button (click)="onSave()" [disabled]="addForm.invalid">
+    Save
+  </button>
+</mat-dialog-actions>
