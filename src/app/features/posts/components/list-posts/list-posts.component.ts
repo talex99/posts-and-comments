@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import {
+  AfterViewInit,
   Component,
   DestroyRef,
   inject,
-  OnInit,
   ViewChild,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -31,7 +31,7 @@ import { UpdatePostComponent } from '../update-post/update-post.component';
   templateUrl: './list-posts.component.html',
   styleUrl: './list-posts.component.scss',
 })
-export class ListPostsComponent implements OnInit {
+export class ListPostsComponent implements AfterViewInit {
   //#region  Dependencies
 
   private httpService = inject(PostsHttpService);
@@ -57,7 +57,7 @@ export class ListPostsComponent implements OnInit {
 
   //#region Lifecycle Hooks
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.initPosts();
   }
 

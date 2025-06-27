@@ -1,8 +1,8 @@
 import {
+  AfterViewInit,
   Component,
   DestroyRef,
   inject,
-  OnInit,
   ViewChild,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -32,7 +32,7 @@ import {
   templateUrl: './list-comments.component.html',
   styleUrl: './list-comments.component.scss',
 })
-export class ListCommentsComponent implements OnInit {
+export class ListCommentsComponent implements AfterViewInit {
   //#region Dependencies
   private httpService = inject(CommentsHttpService);
   private dialog = inject(MatDialog);
@@ -56,9 +56,11 @@ export class ListCommentsComponent implements OnInit {
   //#endregion
 
   //#region Lifecycle Hooks
-  ngOnInit(): void {
+
+  ngAfterViewInit(): void {
     this.initComments();
   }
+
   //#region  Init
 
   private initComments(): void {
