@@ -1,0 +1,21 @@
+@if (formReady() === true) {
+  <h2 mat-dialog-title>Update post</h2>
+  <mat-dialog-content>
+    <form [formGroup]="editForm">
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Body</mat-label>
+        <input matInput formControlName="body" />
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="onCancel()">Cancel</button>
+    <button mat-flat-button (click)="onSave()" [disabled]="editForm.invalid">
+      Save
+    </button>
+  </mat-dialog-actions>
+}

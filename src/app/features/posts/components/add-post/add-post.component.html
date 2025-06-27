@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Add new post</h2>
+<mat-dialog-content>
+  <form [formGroup]="addForm">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Body</mat-label>
+      <input matInput formControlName="body" />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onCancel()">Cancel</button>
+  <button mat-flat-button (click)="onSave()" [disabled]="addForm.invalid">
+    Save
+  </button>
+</mat-dialog-actions>
